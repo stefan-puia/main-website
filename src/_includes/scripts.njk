@@ -1,12 +1,26 @@
-<script src="/assets/js/main{% devEnv '', '.min' %}.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+  integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.poptrox/2.5.0/jquery.poptrox.min.js"
+  integrity="sha512-99AM6PErJgj64lpfsIL38qAaskIGBFRUseWUBRtOCjArpkBgkqPfWtZP6h2TR6EEMWefD2AkFUYhold3lJVW3A=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="/assets/js/browser.js"></script>
+<script src="/assets/js/breakpoints.js"></script>
+<script src="/assets/js/util.min.js"></script>
+<script src="/assets/js/main.min.js"></script>
 <script>
   if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", (user) => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => {
-          document.location.href = "/admin/";
-        });
-      }
-    });
+    window
+      .netlifyIdentity
+      .on("init", (user) => {
+        if (!user) {
+          window
+            .netlifyIdentity
+            .on("login", () => {
+              document.location.href = "/admin/";
+            });
+        }
+      });
   }
 </script>

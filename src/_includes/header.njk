@@ -1,0 +1,13 @@
+<style>
+  :root {
+    --header-overlay: url("{{ config.header.overlay }}");
+    --header-background: url("{{ config.header.background }}");
+  }
+</style>
+
+<header id="header">
+  <div class="inner">
+    <a href="/" class="image avatar"><img src="{{ config.header.avatar }}" alt="{{ config.header.avatarAlt }}"/></a>
+    <h1>{{ config.header.description | safe }}</h1>
+  </div>
+</header>

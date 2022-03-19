@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
     <!-- Primary Meta Tags -->
     <title>{{ title }}</title>
     <meta name="title" content="{{ title }}">
@@ -24,13 +24,15 @@
     <meta property="twitter:description" content="{{ meta.siteDescription }}">
     <meta property="twitter:image" content="{{ meta.siteImage }}">
 
-    <link rel="stylesheet" href="/assets/css/main{% devEnv '', '.min' %}.css" />
+    <link rel="stylesheet" href="/assets/css/main.min.css"/>
     <script defer src="https://unpkg.com/netlify-identity-widget"></script>
   </head>
   <body class="is-preload">
-<div id="wrapper">
-  <div id="main">
-    {{ content | safe }}
+    {% include 'header.njk' %}
+    <div id="main">
+      {{ content | safe }}
+    </div>
+    {% include 'footer.njk' %}
     {% include 'scripts.njk' %}
   </body>
 </html>

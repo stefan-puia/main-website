@@ -5,4 +5,10 @@ module.exports = [
       return [...(pages ?? [])].filter((page) => !!page.data.featured?.isFeatured);
     },
   ],
+  [
+    "portfolio",
+    (pages) => {
+      return [...(pages ?? [])].filter((page) => !!page.data.isPortfolio);
+    },
+  ],
 ];

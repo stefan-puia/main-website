@@ -1,5 +1,6 @@
 {
   "http_404": {
+    "title": "404 - Page not found.",
     "header": "Page not found."
   }
 }

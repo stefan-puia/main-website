@@ -3,21 +3,15 @@ layout: "base.njk"
 ---
 
 <section id="two">
-  <h2>{{ config.home.recentWork.header }}</h2>
-  <div class="row">
-    {% for blog in collections.blog | featured %}
-      <article class="col-6 col-12-xsmall work-item">
-        <a href="{{ blog.data.featured.imageFull }}" class="image fit thumb">
-          <img src="{{ blog.data.featured.imageThumb }}" alt="{{ blog.data.featured.imageAlt }}"/>
-        </a>
-        <h3>{{ blog.data.title }}</h3>
-        <p>{{ blog.data.featured.description }}</p>
-      </article>
-    {% endfor %}
-  </div>
+  <h2>{{ config.portfolio.header | safe }}</h2>
   <ul class="actions">
     <li>
-      <a href="/portfolio" class="button">{{ config.home.portfolioButton }}</a>
+      <a href="/blog" class="button">{{ config.portfolio.blogButton }}</a>
     </li>
   </ul>
+  <div class="row">
+    {% for blog in collections.blog | portfolio %}
+      {% include 'article.njk' %}
+    {% endfor %}
+  </div>
 </section>

@@ -2,9 +2,14 @@ import { asset, el, elc, wrap } from "./element-builder.mjs";
 
 export const BlogPreview = createClass({
   render: function () {
-    const entry = this.props.entry;
     return wrap(
-      el("section", header(this.props), image(this.props), this.props.widgetFor("body")),
+      el(
+        "section",
+        header(this.props),
+        image(this.props),
+        links(this.props),
+        this.props.widgetFor("body")
+      ),
       h("hr"),
       featuredVersion(this.props)
     );
@@ -12,12 +17,47 @@ export const BlogPreview = createClass({
 });
 
 function header(props) {
-  console.log(props.assetentry);
   return el(
     "header",
     el("h2", props.entry.getIn(["data", "title"])),
     el("p", el("small", `Stefan, 01/01/2022`))
   );
+}
+
+function links(props) {
+  const portfolio = props.widgetsFor("portfolio");
+  const isPortfolio = portfolio.getIn(["data", "isPortfolio"]);
+  const github = portfolio.getIn(["data", "githubSource"]);
+  const liveUrl = portfolio.getIn(["data", "liveUrl"]);
+  const technologies = (portfolio.getIn(["data", "technologies"]) || "").split("\n");
+
+  return (
+    isPortfolio &&
+    elc(
+      "ul",
+      "icons flex",
+      github &&
+      el(
+        "li",
+        fontAwesome(github, "icon brands fa-github", "See the source on GitHub")
+      ),
+      liveUrl && el("li", fontAwesome(liveUrl, "icon solid fa-link", "See live version")),
+      ...technologies.map(technology => el("li", h("img", { src: technology })))
+    )
+  );
+
+  function fontAwesome(href, icon, label) {
+    return h(
+      "a",
+      {
+        target: "_blank",
+        rel: "noopener noreferrer",
+        href,
+        className: icon,
+      },
+      elc("span", "label", label)
+    );
+  }
 }
 
 function image(props) {

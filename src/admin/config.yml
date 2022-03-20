@@ -122,11 +122,6 @@ collections:
         name: title
         widget: string
 
-      - label: Is portfolio
-        name: isPortfolio
-        widget: boolean
-        default: false
-
       - label: Full Image
         name: imageFull
         widget: image
@@ -146,6 +141,31 @@ collections:
         name: body
         widget: markdown
         required: false
+
+      - label: Portfolio
+        name: portfolio
+        widget: object
+        fields:
+          - label: Is portfolio
+            name: isPortfolio
+            widget: boolean
+            default: false
+
+          - label: GitHub Source
+            name: githubSource
+            widget: string
+            required: false
+
+          - label: Live URL
+            name: liveUrl
+            widget: string
+            required: false
+
+          - label: Technologies
+            name: technologies
+            widget: text
+            required: false
+            hint: image urls, each on a new line https://devicon.dev/
 
       - label: Featured
         name: featured

@@ -8,13 +8,13 @@ module.exports = [
   [
     "portfolio",
     (pages) => {
-      return [...(pages ?? [])].filter((page) => !!page.data.isPortfolio);
+      return [...(pages ?? [])].filter((page) => !!page.data?.portfolio?.isPortfolio);
     },
   ],
   [
     "notPortfolio",
     (pages) => {
-      return [...(pages ?? [])].filter((page) => !page.data.isPortfolio);
+      return [...(pages ?? [])].filter((page) => !page.data?.portfolio?.isPortfolio);
     },
   ],
 ];

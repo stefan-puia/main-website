@@ -884,6 +884,31 @@ ul.icons {
       }
     }
   }
+
+  &.flex {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    width: fit-content;
+    column-gap: 0.5em;
+
+    li {
+      padding: 0;
+      display: flex;
+
+      .icon {
+        font-size: 1.3em;
+
+        &:before {
+          font-size: unset;
+        }
+      }
+
+      img {
+        width: 1.3em;
+      }
+    }
+  }
 }
 
 /* Labeled Icons */

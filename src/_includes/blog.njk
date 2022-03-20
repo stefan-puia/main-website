@@ -19,5 +19,40 @@ layout: "base.njk"
       </div>
     </div>
   </div>
+  {% if portfolio.isPortfolio %}
+    <ul class="icons flex">
+      {% if portfolio.githubSource %}
+        <li>
+          <a
+        href="{{ portfolio.githubSource }}"
+        class="icon brands fa-github"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+            <span class="label">See the source on GitHub</span>
+          </a>
+        </li>
+      {% endif %}
+      {% if portfolio.liveUrl %}
+        <li>
+          <a
+        href="{{ portfolio.liveUrl }}"
+        class="icon solid fa-link"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+            <span class="label">See live version</span>
+          </a>
+        </li>
+        {% for technology in portfolio
+          .technologies
+          .split("\n") %}
+          <li>
+            <img src="{{ technology }}"/>
+          </li>
+        {% endfor %}
+      {% endif %}
+    </ul>
+  {% endif %}
   {{ content | safe }}
 </section>

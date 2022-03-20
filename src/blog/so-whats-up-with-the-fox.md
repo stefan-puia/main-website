@@ -3,6 +3,7 @@ title: So, what's up with the fox?
 isPortfolio: false
 imageFull: /uploads/4t0kdex1swh41.png
 imageAlt: Snow falling on a red fox
+imageCredit: "Cute fox enjoys snow (by: Matyas Szendi)"
 featured:
   isFeatured: true
   description: |

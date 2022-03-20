@@ -1,3 +1,4 @@
+import { ConfigAcknowledgementsPreview } from "./preview/acknowledgements.mjs";
 import { BlogPreview } from "./preview/blog.mjs";
 import { ConfigErrorsPreview } from "./preview/config-errors.mjs";
 import { ConfigHeaderPreview } from "./preview/config-header.mjs";
@@ -10,3 +11,4 @@ CMS.registerPreviewTemplate("config-errors", ConfigErrorsPreview);
 CMS.registerPreviewTemplate("config-home", ConfigHomePreview);
 CMS.registerPreviewTemplate("config-header", ConfigHeaderPreview);
 CMS.registerPreviewTemplate("blog", BlogPreview);
+CMS.registerPreviewTemplate("acknowledgements", ConfigAcknowledgementsPreview);

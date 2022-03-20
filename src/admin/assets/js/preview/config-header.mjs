@@ -59,7 +59,7 @@ function footerInner() {
       "ul",
       "copyright",
       h("li", html("&copy; Stefan Puia")),
-      el("li", "Design: HTML5 UP")
+      el("li", "Acknowledgements")
     )
   );
 }

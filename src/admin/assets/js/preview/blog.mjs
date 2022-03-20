@@ -42,7 +42,8 @@ function links(props) {
         fontAwesome(github, "icon brands fa-github", "See the source on GitHub")
       ),
       liveUrl && el("li", fontAwesome(liveUrl, "icon solid fa-link", "See live version")),
-      ...technologies.map(technology => el("li", h("img", { src: technology })))
+      h("li", { style: { flex: 1 } }),
+      ...technologies.map((technology) => el("li", h("img", { src: technology })))
     )
   );
 

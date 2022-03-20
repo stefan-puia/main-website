@@ -17,6 +17,8 @@ portfolio:
 
     https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg
 
+    https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg
+
     https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg
 featured:
   isFeatured: false
@@ -24,4 +26,5 @@ featured:
   description: A tool to help raid leaders create and manage raid teams in World
     of Warcraft.
 ---
+
 A tool to help raid leaders create and manage raid teams in World of Warcraft.

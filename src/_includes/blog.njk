@@ -44,15 +44,16 @@ layout: "base.njk"
             <span class="label">See live version</span>
           </a>
         </li>
-        {% for technology in portfolio
-          .technologies
-          .split("\n") %}
-          <li>
-            <img src="{{ technology }}"/>
-          </li>
-        {% endfor %}
       {% endif %}
-    </ul>
-  {% endif %}
+      <li style="flex: 1"></li>
+      {% for technology in portfolio
+        .technologies
+        .split("\n") %}
+        <li>
+          <img src="{{ technology }}"/>
+        </li>
+      {% endfor %}
+    {% endif %}
+  </ul>
   {{ content | safe }}
 </section>

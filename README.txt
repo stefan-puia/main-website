@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/015e2a68-18af-4c69-b498-a5068fc1fa8b/deploy-status)](https://app.netlify.com/sites/zealous-jackson-441d2e/deploys)
+
 Strata by HTML5 UP
 html5up.net | @ajlkn
 Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)

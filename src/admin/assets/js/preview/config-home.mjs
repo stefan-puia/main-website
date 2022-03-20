@@ -8,9 +8,8 @@ export const ConfigHomePreview = createClass({
 });
 
 function hero(entry) {
-  return eli(
+  return el(
     "section",
-    "one",
     elc("header", "major", h("h2", html(entry.getIn(["data", "heroHeader"])))),
     h("p", html(entry.getIn(["data", "heroDescription"]))),
     elc(
@@ -25,11 +24,10 @@ function hero(entry) {
 }
 function featured(props) {
   const widgets = props.widgetsFor("featured");
-  return eli(
+  return el(
     "section",
-    "two",
     el("h2", widgets.getIn(["data", "header"])),
-    elc("div", "row", exampleArticle(), exampleArticle()),
+    elc("div", "row", exampleArticle(props), exampleArticle(props)),
     elc(
       "ul",
       "actions",
@@ -41,8 +39,8 @@ function featured(props) {
   );
 }
 
-function exampleArticle() {
-  return featuredBlog({
+function exampleArticle(props) {
+  return featuredBlog(props, {
     title: "Lorem ipsum",
     description: "Commodo ut minim commodo culpa exercitation laborum qui.",
     imageThumb: "https://picsum.photos/300/150",

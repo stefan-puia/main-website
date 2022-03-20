@@ -11,4 +11,10 @@ module.exports = [
       return [...(pages ?? [])].filter((page) => !!page.data.isPortfolio);
     },
   ],
+  [
+    "notPortfolio",
+    (pages) => {
+      return [...(pages ?? [])].filter((page) => !page.data.isPortfolio);
+    },
+  ],
 ];

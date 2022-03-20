@@ -3,4 +3,10 @@ layout: "base.njk"
 permalink: 404.html
 ---
 
-{% markdown %}{{ config.errors.http_404.header }}{% endmarkdown %}
+{% markdown %}{{ config.errors.http_404.header | safe }}{% endmarkdown %}
+
+<ul class="actions">
+  <li>
+    <a href="/" class="button"> Go back </a>
+  </li>
+</ul>

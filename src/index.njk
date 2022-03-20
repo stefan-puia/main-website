@@ -2,7 +2,7 @@
 layout: "base.njk"
 ---
 
-<section id="one">
+<section>
   <header class="major">
     <h2>{{ config.home.heroHeader | safe }}</h2>
   </header>
@@ -15,17 +15,11 @@ layout: "base.njk"
 </section>
 
 {% if ((collections.blog | featured).length > 0) %}
-  <section id="two">
+  <section>
     <h2>{{ config.home.featured.header }}</h2>
     <div class="row">
       {% for blog in collections.blog | featured %}
-        <article class="col-6 col-12-xsmall work-item">
-          <a href="{{ blog.data.featured.imageFull }}" class="image fit thumb">
-            <img src="{{ blog.data.featured.imageThumb }}" alt="{{ blog.data.featured.imageAlt }}"/>
-          </a>
-          <h3>{{ blog.data.title }}</h3>
-          <p>{{ blog.data.featured.description }}</p>
-        </article>
+        {% include 'article.njk' %}
       {% endfor %}
     </div>
     <ul class="actions">

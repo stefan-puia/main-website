@@ -1,3 +1,4 @@
+import { featuredBlog } from "./blog.mjs";
 import { el, elc, eli, html, wrap } from "./element-builder.mjs";
 
 export const ConfigHomePreview = createClass({
@@ -28,7 +29,7 @@ function featured(props) {
     "section",
     "two",
     el("h2", widgets.getIn(["data", "header"])),
-    exampleFeatured(),
+    elc("div", "row", exampleArticle(), exampleArticle()),
     elc(
       "ul",
       "actions",
@@ -40,23 +41,10 @@ function featured(props) {
   );
 }
 
-function exampleFeatured() {
-  return elc("div", "row", article(), article());
-
-  function article() {
-    return elc(
-      "article",
-      "col-6 col-12-xsmall work-item",
-      h(
-        "a",
-        { href: "#", className: "image fit thumb" },
-        h("img", { src: "https://picsum.photos/300/150" })
-      ),
-      el("h3", "Lorem ipsum"),
-      el(
-        "p",
-        "Cillum proident magna incididunt cupidatat mollit mollit ipsum labore ad sunt aliquip elit nisi ea."
-      )
-    );
-  }
+function exampleArticle() {
+  return featuredBlog({
+    title: "Lorem ipsum",
+    description: "Commodo ut minim commodo culpa exercitation laborum qui.",
+    imageThumb: "https://picsum.photos/300/150",
+  });
 }

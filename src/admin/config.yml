@@ -114,6 +114,26 @@ collections:
         name: title
         widget: string
 
+      - label: Is portfolio
+        name: isPortfolio
+        widget: boolean
+        default: false
+
+      - label: Full Image
+        name: imageFull
+        widget: image
+        required: false
+
+      - label: Image alt
+        name: imageAlt
+        widget: string
+        required: false
+
+      - label: Content
+        name: body
+        widget: markdown
+        required: false
+
       - label: Featured
         name: featured
         widget: object
@@ -126,18 +146,10 @@ collections:
           - label: Description
             name: description
             widget: text
-
-          - label: Full Image
-            name: imageFull
-            widget: image
+            required: false
 
           - label: Image thumbnail
             name: imageThumb
             widget: image
             required: false
             hint: works best with 2:1
-
-          - label: Image alt
-            name: imageAlt
-            widget: string
-            required: false

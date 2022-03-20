@@ -4,17 +4,21 @@ export const BlogPreview = createClass({
   render: function () {
     const entry = this.props.entry;
     return wrap(
-      el(
-        "section",
-        el("h2", entry.getIn(["data", "title"])),
-        image(this.props),
-        this.props.widgetFor("body")
-      ),
+      el("section", header(this.props), image(this.props), this.props.widgetFor("body")),
       h("hr"),
       featuredVersion(this.props)
     );
   },
 });
+
+function header(props) {
+  console.log(props.assetentry);
+  return el(
+    "header",
+    el("h2", props.entry.getIn(["data", "title"])),
+    el("p", el("small", `Stefan, 01/01/2022`))
+  );
+}
 
 function image(props) {
   const imageFull = props.getAsset(props.entry.getIn(["data", "imageFull"])).toString();
@@ -26,7 +30,7 @@ function image(props) {
       "row gtr-50 gtr-uniform",
       elc(
         "div",
-        "col-12",
+        "col-12 align-right",
         elc(
           "span",
           "image fit",
@@ -34,7 +38,8 @@ function image(props) {
             src: imageFull,
             alt: props.entry.getIn(["data", "imageAlt"]),
           })
-        )
+        ),
+        el("small", props.entry.getIn(["data", "imageCredit"]))
       )
     )
   );

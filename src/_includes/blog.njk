@@ -3,14 +3,19 @@ layout: "base.njk"
 ---
 
 <section>
-  <h2>{{ title }}</h2>
+  <header>
+    <h2>{{ title }}</h2>
+    <p>
+      <small>{{ author }}, {{ page.date | formatDate }}</small>
+    </p>
+  </header>
   <div class="box alt">
     <div class="row gtr-50 gtr-uniform">
       <div class="col-12 align-right">
         <span class="image fit">
           <img src="{{ imageFull }}" alt="{{ imageAlt }}"/>
         </span>
-        <sub>{{ imageCredit }}</sub>
+        <small>{{ imageCredit }}</small>
       </div>
     </div>
   </div>

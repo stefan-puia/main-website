@@ -1,5 +1,5 @@
 # local_backend: true
-# site_url: http://localhost:8080
+site_url: https://stefanpuia.co.uk
 
 backend:
   name: git-gateway

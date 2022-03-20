@@ -3,7 +3,7 @@
   "background": "/uploads/bg.jpg",
   "avatar": "/uploads/profile500.jpg",
   "avatarAlt": "Stefan's profile picture - a red fox",
-  "description": "<strong>Stefan Puia</strong><br>Full stack Java developer, NodeJS and TypeScript enthusiast.",
+  "description": "<strong>Stefan Puia</strong>, Full stack Java developer. NodeJS and TypeScript enthusiast.",
   "footerOverlay": "/uploads/overlay.png",
   "footerBackground": "/uploads/bg.jpg"
 }

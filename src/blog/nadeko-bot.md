@@ -15,6 +15,7 @@ portfolio:
     https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg
 
     /uploads/discord-icon.svg
+  githubSource: https://github.com/StefanPuia/nadeko
 featured:
   isFeatured: false
   description: Popular general-purpose Discord bot written in C#

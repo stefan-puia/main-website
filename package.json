@@ -22,7 +22,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "1.0.0",
+    "@11ty/eleventy": "1.0.1",
     "concurrently": "7.1.0",
     "cross-env": "7.0.3",
     "follow-redirects": "1.14.9",

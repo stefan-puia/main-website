@@ -9,6 +9,9 @@ layout: "base.njk"
   <p>{{ config.home.heroDescription | safe }}</p>
   <ul class="actions">
     <li>
+      <a href="/portfolio" class="button">{{ config.home.featured.button }}</a>
+    </li>
+    <li>
       <a href="/blog" class="button">{{ config.home.button }}</a>
     </li>
   </ul>
@@ -22,10 +25,5 @@ layout: "base.njk"
         {% include 'article.njk' %}
       {% endfor %}
     </div>
-    <ul class="actions">
-      <li>
-        <a href="/portfolio" class="button">{{ config.home.featured.button }}</a>
-      </li>
-    </ul>
   </section>
 {% endif %}

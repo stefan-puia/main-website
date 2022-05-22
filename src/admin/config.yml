@@ -111,6 +111,28 @@ collections:
             name: body
             widget: markdown
 
+  - label: Technologies
+    name: technologies
+    folder: src/technologies
+    label_singular: Technology
+    create: true
+    slug: "{{key}}"
+    summary: '{{fields.description}}'
+    fields:
+      - label: Key
+        name: key
+        widget: string
+        required: true
+      - label: Description
+        name: description
+        widget: string
+        required: true
+      - label: Image
+        name: image
+        widget: image
+        required: true
+        hint: image urls, each on a new line https://devicon.dev/
+
   - name: blog
     label: Blog
     folder: src/blog
@@ -121,6 +143,10 @@ collections:
       - label: Title
         name: title
         widget: string
+
+      - label: Date
+        name: date
+        widget: date
 
       - label: Full Image
         name: imageFull
@@ -150,6 +176,7 @@ collections:
             name: isPortfolio
             widget: boolean
             default: false
+            required: false
 
           - label: GitHub Source
             name: githubSource
@@ -163,9 +190,13 @@ collections:
 
           - label: Technologies
             name: technologies
-            widget: text
+            widget: relation
+            collection: "technologies"
+            value_field: "key"
+            search_fields: ["key", "description"]
+            display_fields: ["description"]
+            multiple: true
             required: false
-            hint: image urls, each on a new line https://devicon.dev/
 
       - label: Featured
         name: featured

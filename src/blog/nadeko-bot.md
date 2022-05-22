@@ -1,5 +1,6 @@
 ---
 title: Nadeko Bot
+date: 2022-03-20T14:05:17.264Z
 imageFull: /uploads/nadeko.webp
 imageAlt: anime girl with red eyes and white hair
 imageCredit: Nadeko Sengoku, Bakemonogatari series

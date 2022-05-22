@@ -1,6 +1,7 @@
 ---
 title: So, what's up with the fox?
 isPortfolio: false
+date: 2022-03-20T14:07:33.070Z
 imageFull: /uploads/fox-snow.webp
 imageAlt: Snow falling on a red fox
 imageCredit: "Cute fox enjoys snow (by: Matyas Szendi)"

@@ -1,5 +1,6 @@
 ---
 title: World of Warcraft Raid Composition Tool
+date: 2022-03-20T14:08:05.733Z
 imageFull: /uploads/raidcomp.webp
 imageAlt: raid composition tool
 portfolio:

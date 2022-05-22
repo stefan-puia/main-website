@@ -144,6 +144,10 @@ collections:
         name: title
         widget: string
 
+      - label: Date
+        name: date
+        widget: date
+
       - label: Full Image
         name: imageFull
         widget: image

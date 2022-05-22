@@ -172,6 +172,7 @@ collections:
             name: isPortfolio
             widget: boolean
             default: false
+            required: false
 
           - label: GitHub Source
             name: githubSource

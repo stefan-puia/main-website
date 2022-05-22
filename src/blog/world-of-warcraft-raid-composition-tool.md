@@ -1,6 +1,6 @@
 ---
 title: World of Warcraft Raid Composition Tool
-imageFull: /uploads/2022-03-20-12-34-raidcomp.stefanpuia.co.uk.png
+imageFull: /uploads/raidcomp.webp
 imageAlt: raid composition tool
 portfolio:
   isPortfolio: true
@@ -16,7 +16,7 @@ portfolio:
     - nginx
 featured:
   isFeatured: false
-  imageThumb: /uploads/thumb.png
+  imageThumb: /uploads/raidcomp.thumb.webp
   description: A tool to help raid leaders create and manage raid teams in World
     of Warcraft.
 ---

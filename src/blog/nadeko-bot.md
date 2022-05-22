@@ -1,6 +1,6 @@
 ---
 title: Nadeko Bot
-imageFull: /uploads/nadeko.png
+imageFull: /uploads/nadeko.webp
 imageAlt: anime girl with red eyes and white hair
 imageCredit: Nadeko Sengoku, Bakemonogatari series
 portfolio:
@@ -15,6 +15,7 @@ portfolio:
 featured:
   isFeatured: false
   description: Popular general-purpose Discord bot written in C#
+  imageThumb: /uploads/nadeko.thumb.webp
 ---
 I'm currently maintaining a fork of a popular discord bot, [NadekoBot](https://nadeko.bot/). (Forked from <https://gitlab.com/Kwoth/nadekobot>)
 

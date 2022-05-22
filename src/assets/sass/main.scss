@@ -898,6 +898,9 @@ ul.icons {
 
       .icon {
         font-size: 1.3em;
+        min-width: 48px;
+        min-height: 48px;
+        text-align: center;
 
         &:before {
           font-size: unset;

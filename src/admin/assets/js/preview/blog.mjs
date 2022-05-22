@@ -29,7 +29,7 @@ function links(props) {
   const isPortfolio = portfolio.getIn(["data", "isPortfolio"]);
   const github = portfolio.getIn(["data", "githubSource"]);
   const liveUrl = portfolio.getIn(["data", "liveUrl"]);
-  const technologies = (portfolio.getIn(["data", "technologies"]) || "").split("\n");
+  const technologies = portfolio.getIn(["widgets", "technologies"]);
 
   return (
     isPortfolio &&
@@ -43,7 +43,7 @@ function links(props) {
       ),
       liveUrl && el("li", fontAwesome(liveUrl, "icon solid fa-link", "See live version")),
       h("li", { style: { flex: 1 } }),
-      ...technologies.map((technology) => el("li", h("img", { src: technology })))
+      technologies,
     )
   );
 

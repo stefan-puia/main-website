@@ -1,7 +1,7 @@
 {
   "overlay": "/uploads/overlay.png",
   "background": "/uploads/photo-1516748797119-1456fdcc3201-1-.jpg",
-  "avatar": "/uploads/avatar.jpg",
+  "avatar": "/uploads/avatar.webp",
   "avatarAlt": "Stefan's profile picture - a red fox",
   "description": "<strong>Stefan Puia</strong>, Full stack Java developer. NodeJS and TypeScript enthusiast.",
   "footerOverlay": "/uploads/overlay.png",

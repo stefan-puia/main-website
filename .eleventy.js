@@ -15,6 +15,11 @@ module.exports = (config) => {
   [...either].forEach(([name, fn]) => config.addShortcode(name, fn));
   [...markdownPaired].forEach(
     ([name, fn]) => config.addPairedShortcode(name, fn));
+  config.setBrowserSyncConfig({
+    snippetOptions: {
+      ignorePaths: "/admin/**"
+    }
+  });
 
   return {
     dir: {

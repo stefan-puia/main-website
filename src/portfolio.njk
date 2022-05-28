@@ -10,7 +10,7 @@ layout: "base.njk"
     </li>
   </ul>
   <div class="row">
-    {% for blog in collections.blog | portfolio %}
+    {% for blog in collections.blog | portfolio | latest %}
       {% include 'article.njk' %}
     {% endfor %}
   </div>

@@ -11,7 +11,7 @@ title: {{ config.blog.title.toString() }}
     </li>
   </ul>
   <div class="row">
-    {% for blog in collections.blog | notPortfolio %}
+    {% for blog in collections.blog | notPortfolio | latest %}
       {% include 'article.njk' %}
     {% endfor %}
   </div>

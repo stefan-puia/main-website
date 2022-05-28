@@ -21,7 +21,7 @@ layout: "base.njk"
   <section>
     <h2>{{ config.home.featured.header }}</h2>
     <div class="row">
-      {% for blog in collections.blog | featured %}
+      {% for blog in collections.blog | featured | latest %}
         {% include 'article.njk' %}
       {% endfor %}
     </div>

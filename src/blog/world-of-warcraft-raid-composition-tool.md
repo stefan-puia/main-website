@@ -6,7 +6,7 @@ imageAlt: raid composition tool
 portfolio:
   isPortfolio: true
   githubSource: https://github.com/StefanPuia/raid-comp
-  liveUrl: https://raidcomp.stefanpuia.co.uk/
+  liveUrl: https://raidcomp.uk/
   technologies:
     - typescript
     - react

@@ -53,8 +53,7 @@ function footerInner() {
       "icons",
       el("li", elc("a", "icon solid fa-home", elc("span", "label", "Home"))),
       el("li", elc("a", "icon brands fa-github", elc("span", "label", "Github"))),
-      el("li", elc("a", "icon solid fa-envelope", elc("span", "label", "Email"))),
-      el("li", elc("a", "icon solid fa-mug-hot", elc("span", "label", "Ko-fi")))
+      el("li", elc("a", "icon solid fa-envelope", elc("span", "label", "Email")))
     ),
     elc(
       "ul",

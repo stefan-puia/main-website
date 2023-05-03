@@ -1,0 +1,271 @@
+@import "libs/vars";
+@import "libs/functions";
+@import "libs/mixins";
+@import "libs/breakpoints";
+
+@media(prefers-color-scheme: light) {
+  body {
+    background: _palette(bg);
+  }
+
+  body,
+  input,
+  select,
+  textarea {
+    color: _palette(fg);
+  }
+
+  a {
+    color: _palette(accent1, bg);
+
+    &:hover {
+      color: _palette(accent1, bg) !important;
+      font-weight: bold;
+    }
+  }
+
+  strong,
+  b,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  label{
+    color: _palette(fg-bold);
+  }
+
+  hr {
+    border-bottom: solid 2px _palette(border);
+  }
+
+  blockquote {
+    border-left: solid 6px _palette(border);
+  }
+
+  code {
+    background: _palette(border-bg);
+    border: solid 2px _palette(border);
+  }
+
+  header {
+    p {
+      color: _palette(fg-light);
+    }
+  }
+
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  select,
+  textarea {
+    background: _palette(border-bg);
+
+    &:focus {
+      border-color: _palette(accent1, bg);
+    }
+  }
+
+  select {
+    background-image: svg-url(
+        "<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' preserveAspectRatio='none' viewBox='0 0 40 40'><path d='M9.4,12.3l10.4,10.4l10.4-10.4c0.2-0.2,0.5-0.4,0.9-0.4c0.3,0,0.6,0.1,0.9,0.4l3.3,3.3c0.2,0.2,0.4,0.5,0.4,0.9 c0,0.4-0.1,0.6-0.4,0.9L20.7,31.9c-0.2,0.2-0.5,0.4-0.9,0.4c-0.3,0-0.6-0.1-0.9-0.4L4.3,17.3c-0.2-0.2-0.4-0.5-0.4-0.9 c0-0.4,0.1-0.6,0.4-0.9l3.3-3.3c0.2-0.2,0.5-0.4,0.9-0.4S9.1,12.1,9.4,12.3z' fill='#{_palette(border2)}' /></svg>"
+    );
+    option {
+      color: _palette(fg-bold);
+      background: _palette(bg);
+    }
+  }
+
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    & + label {
+      color: _palette(fg);
+
+      &:before {
+        background: _palette(border-bg);
+      }
+    }
+
+    &:checked + label {
+      &:before {
+        background: _palette(fg-bold);
+        border-color: _palette(fg-bold);
+        color: _palette(bg);
+      }
+    }
+
+    &:focus + label {
+      &:before {
+        border-color: _palette(accent1, bg);
+      }
+    }
+  }
+
+
+  ::-webkit-input-placeholder {
+    color: _palette(fg-light) !important;
+  }
+
+  :-moz-placeholder {
+    color: _palette(fg-light) !important;
+  }
+
+  ::-moz-placeholder {
+    color: _palette(fg-light) !important;
+  }
+
+  :-ms-input-placeholder {
+    color: _palette(fg-light) !important;
+  }
+
+  .box {
+    border: solid 2px _palette(border);
+  }
+
+  ul {
+    &.alt {
+      li {
+        border-top: solid 2px _palette(border);
+      }
+    }
+  }
+
+  ul.labeled-icons {
+    li {
+      h3 {
+        color: _palette(fg-light);
+      }
+    }
+  }
+
+
+  table {
+    tbody {
+      tr {
+        border: solid 1px _palette(border);
+
+        &:nth-child(2n + 1) {
+          background-color: _palette(border-bg);
+        }
+      }
+    }
+
+    th {
+      color: _palette(fg-bold);
+    }
+
+    thead {
+      border-bottom: solid 2px _palette(border);
+    }
+
+    tfoot {
+      border-top: solid 2px _palette(border);
+    }
+
+    &.alt {
+      tbody {
+        tr {
+          td {
+            border: solid 2px _palette(border);
+          }
+        }
+      }
+    }
+  }
+
+
+  input[type="submit"],
+  input[type="reset"],
+  input[type="button"],
+  .button {
+    border: solid 3px _palette(border);
+    color: _palette(fg-bold) !important;
+
+    &:hover {
+      border-color: _palette(accent1, bg);
+      color: _palette(accent1, bg) !important;
+    }
+
+    &:active {
+      background-color: transparentize(_palette(accent1, bg), 0.9);
+      border-color: _palette(accent1, bg);
+      color: _palette(accent1, bg) !important;
+    }
+
+    &.primary {
+      background-color: _palette(accent1, bg);
+      border-color: _palette(accent1, bg);
+      color: _palette(accent1, fg-bold) !important;
+
+      &:hover {
+        background-color: lighten(_palette(accent1, bg), 5);
+        border-color: lighten(_palette(accent1, bg), 5);
+      }
+
+      &:active {
+        background-color: darken(_palette(accent1, bg), 5);
+        border-color: darken(_palette(accent1, bg), 5);
+      }
+    }
+
+    &.disabled,
+    &:disabled {
+      background-color: _palette(border2-bg) !important;
+      border-color: _palette(border2-bg) !important;
+      color: _palette(fg-light) !important;
+    }
+  }
+
+  #header {
+    background-color: _palette(accent2, bg);
+    color: _palette(accent2, fg);
+
+    strong,
+    b {
+      color: _palette(accent2, fg-bold);
+    }
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: _palette(accent2, fg-bold);
+    }
+
+    h1 {
+      color: _palette(accent2, fg);
+    }
+  }
+
+  /* Footer */
+
+  #footer {
+    .icons {
+      a {
+        color: _palette(accent2, fg-light);
+      }
+    }
+    .copyright {
+      color: _palette(accent2, fg-light);
+
+      li {
+        border-left: solid 1px _palette(accent2, border);
+      }
+    }
+  }
+
+  #main {
+    > section {
+      border-top: solid 2px _palette(border);
+    }
+  }
+
+  @include breakpoint("<=medium") {
+    #footer {
+      background-color: _palette(accent2, bg);
+    }
+  }
+}

@@ -4,8 +4,10 @@
 @import "libs/vendor";
 @import "libs/breakpoints";
 @import "libs/html-grid";
+@import "lightmode";
+@import "darkmode";
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
 
 /*
   Strata by HTML5 UP
@@ -20,28 +22,28 @@ $size-header-pad: 4em;
 // Breakpoints.
 
 @include breakpoints(
-  (
-    xlarge: (
-      1281px,
-      1800px,
-    ),
-    large: (
-      981px,
-      1280px,
-    ),
-    medium: (
-      737px,
-      980px,
-    ),
-    small: (
-      481px,
-      736px,
-    ),
-    xsmall: (
-      null,
-      480px,
-    ),
-  )
+    (
+      xlarge: (
+        1281px,
+        1800px,
+      ),
+      large: (
+        981px,
+        1280px,
+      ),
+      medium: (
+        737px,
+        980px,
+      ),
+      small: (
+        481px,
+        736px,
+      ),
+      xsmall: (
+        null,
+        480px,
+      ),
+    )
 );
 
 // Reset.
@@ -217,7 +219,6 @@ html {
 }
 
 body {
-  background: _palette(bg);
 
   // Stops initial animations until page loads.
   &.is-preload {
@@ -234,7 +235,6 @@ body,
 input,
 select,
 textarea {
-  color: _palette(fg);
   font-family: _font(family);
   font-size: 16pt;
   font-weight: _font(weight);
@@ -243,26 +243,23 @@ textarea {
 
 a {
   @include vendor(
-    "transition",
-    (
-      "color #{_duration(transition)} ease-in-out",
-      "border-color #{_duration(transition)} ease-in-out"
-    )
+      "transition",
+        (
+          "color #{_duration(transition)} ease-in-out",
+          "border-color #{_duration(transition)} ease-in-out"
+        )
   );
   border-bottom: dotted 1px;
-  color: _palette(accent1, bg);
   text-decoration: none;
 
   &:hover {
     border-bottom-color: transparent;
-    color: _palette(accent1, bg) !important;
     text-decoration: none;
   }
 }
 
 strong,
 b {
-  color: _palette(fg-bold);
   font-weight: _font(weight-bold);
 }
 
@@ -281,7 +278,6 @@ h3,
 h4,
 h5,
 h6 {
-  color: _palette(fg-bold);
   font-weight: _font(weight-bold);
   line-height: 1em;
   margin: 0 0 (_size(element-margin) * 0.5) 0;
@@ -336,7 +332,6 @@ sup {
 
 hr {
   border: 0;
-  border-bottom: solid 2px _palette(border);
 
   // This is the *only* instance where we need to rely on margin collapse.
   margin: _size(element-margin) 0;
@@ -347,16 +342,13 @@ hr {
 }
 
 blockquote {
-  border-left: solid 6px _palette(border);
   font-style: italic;
   margin: 0 0 _size(element-margin) 0;
   padding: 0.5em 0 0.5em 1.5em;
 }
 
 code {
-  background: _palette(border-bg);
   border-radius: _size(border-radius);
-  border: solid 2px _palette(border);
   font-family: _font(family-fixed);
   font-size: 0.9em;
   margin: 0 0.25em;
@@ -467,7 +459,6 @@ article {
 
 header {
   p {
-    color: _palette(fg-light);
     position: relative;
     margin: 0 0 (_size(element-margin) * 0.75) 0;
   }
@@ -506,7 +497,6 @@ form {
 }
 
 label {
-  color: _palette(fg-bold);
   display: block;
   font-size: 0.9em;
   font-weight: _font(weight-bold);
@@ -519,7 +509,6 @@ input[type="email"],
 select,
 textarea {
   @include vendor("appearance", "none");
-  background: _palette(border-bg);
   border-radius: _size(border-radius);
   border: solid 2px transparent;
   color: inherit;
@@ -532,27 +521,15 @@ textarea {
   &:invalid {
     box-shadow: none;
   }
-
-  &:focus {
-    border-color: _palette(accent1, bg);
-  }
 }
 
 select {
-  background-image: svg-url(
-    "<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' preserveAspectRatio='none' viewBox='0 0 40 40'><path d='M9.4,12.3l10.4,10.4l10.4-10.4c0.2-0.2,0.5-0.4,0.9-0.4c0.3,0,0.6,0.1,0.9,0.4l3.3,3.3c0.2,0.2,0.4,0.5,0.4,0.9 c0,0.4-0.1,0.6-0.4,0.9L20.7,31.9c-0.2,0.2-0.5,0.4-0.9,0.4c-0.3,0-0.6-0.1-0.9-0.4L4.3,17.3c-0.2-0.2-0.4-0.5-0.4-0.9 c0-0.4,0.1-0.6,0.4-0.9l3.3-3.3c0.2-0.2,0.5-0.4,0.9-0.4S9.1,12.1,9.4,12.3z' fill='#{_palette(border2)}' /></svg>"
-  );
   background-size: 1.25rem;
   background-repeat: no-repeat;
   background-position: calc(100% - 1rem) center;
   height: _size(element-height);
   padding-right: _size(element-height);
   text-overflow: ellipsis;
-
-  option {
-    color: _palette(fg-bold);
-    background: _palette(bg);
-  }
 
   &:focus {
     &::-ms-value {
@@ -588,7 +565,6 @@ input[type="radio"] {
 
   & + label {
     @include icon(false, solid);
-    color: _palette(fg);
     cursor: pointer;
     display: inline-block;
     font-size: 1em;
@@ -598,7 +574,6 @@ input[type="radio"] {
     position: relative;
 
     &:before {
-      background: _palette(border-bg);
       border-radius: _size(border-radius);
       border: solid 2px transparent;
       content: "";
@@ -616,16 +591,7 @@ input[type="radio"] {
 
   &:checked + label {
     &:before {
-      background: _palette(fg-bold);
-      border-color: _palette(fg-bold);
-      color: _palette(bg);
       content: "\f00c";
-    }
-  }
-
-  &:focus + label {
-    &:before {
-      border-color: _palette(accent1, bg);
     }
   }
 }
@@ -647,22 +613,18 @@ input[type="radio"] {
 }
 
 ::-webkit-input-placeholder {
-  color: _palette(fg-light) !important;
   opacity: 1;
 }
 
 :-moz-placeholder {
-  color: _palette(fg-light) !important;
   opacity: 1;
 }
 
 ::-moz-placeholder {
-  color: _palette(fg-light) !important;
   opacity: 1;
 }
 
 :-ms-input-placeholder {
-  color: _palette(fg-light) !important;
   opacity: 1;
 }
 
@@ -670,7 +632,6 @@ input[type="radio"] {
 
 .box {
   border-radius: _size(border-radius);
-  border: solid 2px _palette(border);
   margin-bottom: _size(element-margin);
   padding: 1.5em;
 
@@ -848,7 +809,6 @@ ul {
     padding-left: 0;
 
     li {
-      border-top: solid 2px _palette(border);
       padding: 0.5em 0;
 
       &:first-child {
@@ -898,7 +858,7 @@ ul.icons {
 
       .icon {
         font-size: 1.3em;
-        min-width: 48px;
+        min-width: 32px;
         min-height: 48px;
         text-align: center;
 
@@ -935,7 +895,6 @@ ul.labeled-icons {
     }
 
     h3 {
-      color: _palette(fg-light);
       left: 0;
       position: absolute;
       text-align: center;
@@ -1054,13 +1013,8 @@ table {
 
   tbody {
     tr {
-      border: solid 1px _palette(border);
       border-left: 0;
       border-right: 0;
-
-      &:nth-child(2n + 1) {
-        background-color: _palette(border-bg);
-      }
     }
   }
 
@@ -1069,19 +1023,10 @@ table {
   }
 
   th {
-    color: _palette(fg-bold);
     font-size: 0.9em;
     font-weight: _font(weight-bold);
     padding: 0 0.75em 0.75em 0.75em;
     text-align: left;
-  }
-
-  thead {
-    border-bottom: solid 2px _palette(border);
-  }
-
-  tfoot {
-    border-top: solid 2px _palette(border);
   }
 
   &.alt {
@@ -1090,7 +1035,6 @@ table {
     tbody {
       tr {
         td {
-          border: solid 2px _palette(border);
           border-left-width: 0;
           border-top-width: 0;
 
@@ -1125,17 +1069,15 @@ input[type="button"],
 .button {
   @include vendor("appearance", "none");
   @include vendor(
-    "transition",
-    (
-      "background-color #{_duration(transition)} ease-in-out",
-      "color #{_duration(transition)} ease-in-out",
-      "border-color #{_duration(transition)} ease-in-out"
-    )
+      "transition",
+        (
+          "background-color #{_duration(transition)} ease-in-out",
+          "color #{_duration(transition)} ease-in-out",
+          "border-color #{_duration(transition)} ease-in-out"
+        )
   );
   background-color: transparent;
   border-radius: _size(border-radius);
-  border: solid 3px _palette(border);
-  color: _palette(fg-bold) !important;
   cursor: pointer;
   display: inline-block;
   font-weight: _font(weight-bold);
@@ -1147,17 +1089,6 @@ input[type="button"],
   text-align: center;
   text-decoration: none;
   white-space: nowrap;
-
-  &:hover {
-    border-color: _palette(accent1, bg);
-    color: _palette(accent1, bg) !important;
-  }
-
-  &:active {
-    background-color: transparentize(_palette(accent1, bg), 0.9);
-    border-color: _palette(accent1, bg);
-    color: _palette(accent1, bg) !important;
-  }
 
   &.icon {
     padding-left: 1.35em;
@@ -1180,27 +1111,8 @@ input[type="button"],
     font-size: 1.35em;
   }
 
-  &.primary {
-    background-color: _palette(accent1, bg);
-    border-color: _palette(accent1, bg);
-    color: _palette(accent1, fg-bold) !important;
-
-    &:hover {
-      background-color: lighten(_palette(accent1, bg), 5);
-      border-color: lighten(_palette(accent1, bg), 5);
-    }
-
-    &:active {
-      background-color: darken(_palette(accent1, bg), 5);
-      border-color: darken(_palette(accent1, bg), 5);
-    }
-  }
-
   &.disabled,
   &:disabled {
-    background-color: _palette(border2-bg) !important;
-    border-color: _palette(border2-bg) !important;
-    color: _palette(fg-light) !important;
     cursor: default;
   }
 }
@@ -1234,12 +1146,10 @@ input[type="button"],
   @include vendor("align-items", "flex-end");
   @include vendor("justify-content", "space-between");
   background-image: var(--header-overlay), var(--header-background);
-  background-color: _palette(accent2, bg);
   background-attachment: scroll, scroll;
   background-position: top left, top left;
   background-repeat: repeat, no-repeat;
   background-size: auto, 150%;
-  color: _palette(accent2, fg);
   height: 100%;
   left: 0;
   padding: ($size-header-pad * 2) $size-header-pad;
@@ -1258,21 +1168,7 @@ input[type="button"],
     margin: 0 0 ($size-header-pad * 0.5) 0;
   }
 
-  strong,
-  b {
-    color: _palette(accent2, fg-bold);
-  }
-
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: _palette(accent2, fg-bold);
-  }
-
   h1 {
-    color: _palette(accent2, fg);
     font-size: 1.35em;
     line-height: 1.75em;
     margin: 0;
@@ -1289,21 +1185,15 @@ input[type="button"],
 #footer {
   .icons {
     margin: (_size(element-margin) * 0.5) 0 0 0;
-
-    a {
-      color: _palette(accent2, fg-light);
-    }
   }
 
   .copyright {
-    color: _palette(accent2, fg-light);
     font-size: 0.8em;
     list-style: none;
     margin: (_size(element-margin) * 0.5) 0 0 0;
     padding: 0;
 
     li {
-      border-left: solid 1px _palette(accent2, border);
       display: inline-block;
       line-height: 1em;
       margin-left: 0.75em;
@@ -1331,7 +1221,6 @@ input[type="button"],
   width: calc(100% - #{$size-header-width});
 
   > section {
-    border-top: solid 2px _palette(border);
     margin: $size-header-pad 0 0 0;
     padding: $size-header-pad 0 0 0;
 
@@ -1639,7 +1528,6 @@ body.is-touch {
   #footer {
     background-attachment: scroll;
     background-image: var(--footer-overlay), var(--footer-background);
-    background-color: _palette(accent2, bg);
     background-position: top left, bottom center;
     background-repeat: repeat, no-repeat;
     background-size: auto, cover;
@@ -1745,8 +1633,7 @@ body.is-touch {
   /* Main */
 
   #main {
-    padding: ($size-header-pad * 1.5) $size-header-pad
-      (($size-header-pad * 1.5) - _size(element-margin)) $size-header-pad;
+    padding: ($size-header-pad * 1.5) $size-header-pad (($size-header-pad * 1.5) - _size(element-margin)) $size-header-pad;
 
     > section {
       margin: ($size-header-pad * 1.5) 0 0 0;

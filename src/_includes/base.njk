@@ -1,48 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="color-scheme" content="dark light">
 
-  <!-- Primary Meta Tags -->
-  <title>{{ title }}</title>
-  <meta name="title" content="{{ title }}">
-  <meta name="description" content="{{ meta.siteDescription }}">
+    <!-- Primary Meta Tags -->
+    <title>{{ title }}</title>
+    <meta name="title" content="{{ title }}">
+    <meta name="description" content="{{ meta.siteDescription }}">
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="{{ meta.siteUrl }}">
-  <meta property="og:title" content="{{ title }}">
-  <meta property="og:description" content="{{ meta.siteDescription }}">
-  <meta property="og:image" content="{{ meta.siteImage }}">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ meta.siteUrl }}">
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:description" content="{{ meta.siteDescription }}">
+    <meta property="og:image" content="{{ meta.siteImage }}">
 
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="{{ meta.siteUrl }}">
-  <meta property="twitter:title" content="{{ title }}">
-  <meta property="twitter:description" content="{{ meta.siteDescription }}">
-  <meta property="twitter:image" content="{{ meta.siteImage }}">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ meta.siteUrl }}">
+    <meta property="twitter:title" content="{{ title }}">
+    <meta property="twitter:description" content="{{ meta.siteDescription }}">
+    <meta property="twitter:image" content="{{ meta.siteImage }}">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap"
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap"
         rel="stylesheet">
-  <link rel="preload" href="/assets/css/main.css" as="style"
+    <link rel="preload" href="/assets/css/main.css" as="style"
         onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="/assets/css/main.css">
-  </noscript>
+    <noscript>
+      <link rel="stylesheet" href="/assets/css/main.css">
+    </noscript>
 
-  <link rel="icon" type="image/png" href="/uploads/favicon.png" />
-  <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-</head>
-<body class="is-preload">
-{% include 'header.njk' %}
-<div id="main">
-  {{ content | safe }}
-</div>
-{% include 'footer.njk' %}
-{% include 'scripts.njk' %}
-</body>
+    <link rel="icon" type="image/png" href="/uploads/favicon.png"/>
+    <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  </head>
+  <body class="is-preload">
+    {% include 'header.njk' %}
+    <div id="main">
+      {{ content | safe }}
+    </div>
+    {% include 'footer.njk' %}
+    {% include 'scripts.njk' %}
+  </body>
 </html>

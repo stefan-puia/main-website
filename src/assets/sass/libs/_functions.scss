@@ -71,6 +71,13 @@
   @return val($palette, $keys...);
 }
 
+/// Gets a dark mode palette value.
+/// @param {string} $keys Key(s).
+/// @return {string} Value.
+@function _paletteDark($keys...) {
+  @return val($paletteDark, $keys...);
+}
+
 /// Gets a size value.
 /// @param {string} $keys Key(s).
 /// @return {string} Value.

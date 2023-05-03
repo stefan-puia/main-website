@@ -8,6 +8,12 @@ layout: "base.njk"
     <li>
       <a href="/blog" class="button">{{ config.portfolio.blogButton }}</a>
     </li>
+    <li>
+      <a href="https://github.com/StefanPuia" rel="noopener noreferrer" target="_blank" class="button">
+        <i class="icon brands fa-github"></i>
+        {{ config.portfolio.githubPage }}
+      </a>
+    </li>
   </ul>
   <div class="row">
     {% for blog in collections.blog | portfolio | latest %}

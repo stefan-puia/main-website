@@ -265,6 +265,11 @@
   resolved "https://registry.yarnpkg.com/@pkgjs/parseargs/-/parseargs-0.11.0.tgz#a77ea742fab25775145434eb1d2328cf5013ac33"
   integrity sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==
 
+"@putout/minify@^1.0.4":
+  version "1.45.0"
+  resolved "https://registry.yarnpkg.com/@putout/minify/-/minify-1.45.0.tgz#cb21b6167a515e08fa1d0e3f065c640804337476"
+  integrity sha512-oo6MqnFemk/+CAwdKh0KECJ4hDsJqsOr+DDUyxxV/A5fB6cYPqczuE+sAf5uhMhU6TTaceJ8bnamCVh/FIMaPw==
+
 "@sindresorhus/slugify@^1.1.2":
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/@sindresorhus/slugify/-/slugify-1.1.2.tgz#c2c0129298b8caace2d9156176fe244d0e83156c"
@@ -1866,11 +1871,12 @@ mime@^3.0.0:
   resolved "https://registry.yarnpkg.com/mime/-/mime-3.0.0.tgz#b374550dca3a0c18443b0c950a6a58f1931cf7a7"
   integrity sha512-jSCU7/VB1loIWBZe14aEYHU/+1UMEHoaO7qxCOVJOw9GgH72VAWppxNcjU+x9a2k3GSIBXNKxXQFqRvvZ7vr3A==
 
-minify@9.2.0:
-  version "9.2.0"
-  resolved "https://registry.yarnpkg.com/minify/-/minify-9.2.0.tgz#4790e94d6c41d53f8b1929468ea759fb5773ef9e"
-  integrity sha512-dfVx8j27TIZy2EE/nVMAhTVmUo6tdO4gYbKXaCYPUmpqWN2QJBgQtPfofsoA658L3Ee7e5OcyFIncJRgFtZcqQ==
+minify@10.3.0:
+  version "10.3.0"
+  resolved "https://registry.yarnpkg.com/minify/-/minify-10.3.0.tgz#f01f5953ffdccfc38661abffe3e4022561b9cd6b"
+  integrity sha512-eRkx2J1ykkGBVi1gI2sksmovWFzts+GYi2u3Jd/S5eNIkzj0pidciICsWRWdTKTLZVFUP7b6IvoAzasvQkMicg==
   dependencies:
+    "@putout/minify" "^1.0.4"
     clean-css "^5.0.1"
     css-b64-images "~0.2.5"
     debug "^4.1.0"
@@ -1878,7 +1884,6 @@ minify@9.2.0:
     html-minifier-terser "^7.1.0"
     readjson "^2.2.2"
     simport "^1.2.0"
-    terser "^5.3.2"
     try-catch "^3.0.0"
     try-to-catch "^3.0.0"
 
@@ -2940,7 +2945,7 @@ supports-preserve-symlinks-flag@^1.0.0:
   resolved "https://registry.yarnpkg.com/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz#6eda4bd344a3c94aea376d4cc31bc77311039e09"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
 
-terser@^5.15.1, terser@^5.3.2:
+terser@^5.15.1:
   version "5.17.1"
   resolved "https://registry.yarnpkg.com/terser/-/terser-5.17.1.tgz#948f10830454761e2eeedc6debe45c532c83fd69"
   integrity sha512-hVl35zClmpisy6oaoKALOpS0rDYLxRFLHhRuDlEGTKey9qHjS1w9GMORjuwIMt70Wan4lwsLYyWDVnWgF+KUEw==

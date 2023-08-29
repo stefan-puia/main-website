@@ -265,10 +265,10 @@
   resolved "https://registry.yarnpkg.com/@pkgjs/parseargs/-/parseargs-0.11.0.tgz#a77ea742fab25775145434eb1d2328cf5013ac33"
   integrity sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==
 
-"@putout/minify@^1.0.4":
-  version "1.45.0"
-  resolved "https://registry.yarnpkg.com/@putout/minify/-/minify-1.45.0.tgz#cb21b6167a515e08fa1d0e3f065c640804337476"
-  integrity sha512-oo6MqnFemk/+CAwdKh0KECJ4hDsJqsOr+DDUyxxV/A5fB6cYPqczuE+sAf5uhMhU6TTaceJ8bnamCVh/FIMaPw==
+"@putout/minify@^2.0.0":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@putout/minify/-/minify-2.0.1.tgz#ee72aaa9e7cbf6ff15dcb9fdef0137f0d832bfe5"
+  integrity sha512-m98CrmfDNxMmS8npnwF5VhTTL4oTSnf0Sdk3oQP4E2jADwOIjbUWPLHspMBATFKD9WmgXCak1aBVnwVX3pzhIg==
 
 "@sindresorhus/slugify@^1.1.2":
   version "1.1.2"
@@ -1876,12 +1876,12 @@ mime@^3.0.0:
   resolved "https://registry.yarnpkg.com/mime/-/mime-3.0.0.tgz#b374550dca3a0c18443b0c950a6a58f1931cf7a7"
   integrity sha512-jSCU7/VB1loIWBZe14aEYHU/+1UMEHoaO7qxCOVJOw9GgH72VAWppxNcjU+x9a2k3GSIBXNKxXQFqRvvZ7vr3A==
 
-minify@10.3.0:
-  version "10.3.0"
-  resolved "https://registry.yarnpkg.com/minify/-/minify-10.3.0.tgz#f01f5953ffdccfc38661abffe3e4022561b9cd6b"
-  integrity sha512-eRkx2J1ykkGBVi1gI2sksmovWFzts+GYi2u3Jd/S5eNIkzj0pidciICsWRWdTKTLZVFUP7b6IvoAzasvQkMicg==
+minify@10.5.1:
+  version "10.5.1"
+  resolved "https://registry.yarnpkg.com/minify/-/minify-10.5.1.tgz#4328049b30b4a09b0917352639709c0004e1cafb"
+  integrity sha512-NcqnFdK2d0a3cGXKh5pGdudqsPKQJN7K9sTfJUge8JrH0v1Z0Je6BPaf3yUyoqDWBqtZmd3pexIYy5czEMvLig==
   dependencies:
-    "@putout/minify" "^1.0.4"
+    "@putout/minify" "^2.0.0"
     clean-css "^5.0.1"
     css-b64-images "~0.2.5"
     debug "^4.1.0"

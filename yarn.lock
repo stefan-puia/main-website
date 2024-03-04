@@ -209,6 +209,14 @@
     "@jridgewell/gen-mapping" "^0.3.0"
     "@jridgewell/trace-mapping" "^0.3.9"
 
+"@jridgewell/source-map@^0.3.3":
+  version "0.3.5"
+  resolved "https://registry.yarnpkg.com/@jridgewell/source-map/-/source-map-0.3.5.tgz#a3bb4d5c6825aab0d281268f47f6ad5853431e91"
+  integrity sha512-UTYAUj/wviwdsMfzoSJspJxbkH5o1snzwX0//0ENX1u/55kkZZkcTZP6u9bwKGkv+dkk9at4m1Cpt0uY80kcpQ==
+  dependencies:
+    "@jridgewell/gen-mapping" "^0.3.0"
+    "@jridgewell/trace-mapping" "^0.3.9"
+
 "@jridgewell/sourcemap-codec@1.4.14":
   version "1.4.14"
   resolved "https://registry.yarnpkg.com/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.4.14.tgz#add4c98d341472a289190b424efbdb096991bb24"
@@ -265,10 +273,10 @@
   resolved "https://registry.yarnpkg.com/@pkgjs/parseargs/-/parseargs-0.11.0.tgz#a77ea742fab25775145434eb1d2328cf5013ac33"
   integrity sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==
 
-"@putout/minify@^2.0.0":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@putout/minify/-/minify-2.0.1.tgz#ee72aaa9e7cbf6ff15dcb9fdef0137f0d832bfe5"
-  integrity sha512-m98CrmfDNxMmS8npnwF5VhTTL4oTSnf0Sdk3oQP4E2jADwOIjbUWPLHspMBATFKD9WmgXCak1aBVnwVX3pzhIg==
+"@putout/minify@^3.0.0":
+  version "3.8.5"
+  resolved "https://registry.yarnpkg.com/@putout/minify/-/minify-3.8.5.tgz#88ad7040536787101703cb9236692038fa2f12ca"
+  integrity sha512-m7Umg719m9kqcq7kV6RXtoRZZyUKn1YQOExfpgbHCYCJvwHPR2J/lADtgtkCFZslUKIyqSsjYUmQeKqDGJpXDg==
 
 "@sindresorhus/slugify@^1.1.2":
   version "1.1.2"
@@ -318,6 +326,11 @@ acorn@^8.5.0:
   version "8.8.2"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.8.2.tgz#1b2f25db02af965399b9776b0c2c391276d37c4a"
   integrity sha512-xjIYgE8HBrkpd/sJqOGNspf8uHG+NOHGOw6a/Urj8taM2EXfdNAH2oFcPeIFfsv3+kz/mJrS5VuMqbNLjCa2vw==
+
+acorn@^8.8.2:
+  version "8.11.3"
+  resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.11.3.tgz#71e0b14e13a4ec160724b38fb7b0f233b1b81d7a"
+  integrity sha512-Y9rRfJG5jcKOE0CLisYbojUjIrIEE7AGMzA/Sm4BslANhbS+cDMpgBdcPT91oJ7OuJ9hYJBx59RjbhxVnrF8Xg==
 
 ansi-regex@^5.0.1:
   version "5.0.1"
@@ -1130,13 +1143,14 @@ finalhandler@1.2.0, finalhandler@^1.2.0:
     statuses "2.0.1"
     unpipe "~1.0.0"
 
-find-up@^6.1.0:
-  version "6.3.0"
-  resolved "https://registry.yarnpkg.com/find-up/-/find-up-6.3.0.tgz#2abab3d3280b2dc7ac10199ef324c4e002c8c790"
-  integrity sha512-v2ZsoEuVHYy8ZIlYqwPe/39Cy+cFDzp4dXPaxNvkEuouymu+2Jbz0PxpKarJHYJTmv2HWT3O382qY8l4jMWthw==
+find-up@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/find-up/-/find-up-7.0.0.tgz#e8dec1455f74f78d888ad65bf7ca13dd2b4e66fb"
+  integrity sha512-YyZM99iHrqLKjmt4LJDj58KI+fYyufRLBSYcqycxf//KpBk9FoewoGX0450m9nB44qrZnovzC2oeP5hUibxc/g==
   dependencies:
-    locate-path "^7.1.0"
+    locate-path "^7.2.0"
     path-exists "^5.0.0"
+    unicorn-magic "^0.1.0"
 
 fn.name@1.x.x:
   version "1.1.0"
@@ -1737,7 +1751,7 @@ load-json-file@^4.0.0:
     pify "^3.0.0"
     strip-bom "^3.0.0"
 
-locate-path@^7.1.0:
+locate-path@^7.2.0:
   version "7.2.0"
   resolved "https://registry.yarnpkg.com/locate-path/-/locate-path-7.2.0.tgz#69cb1779bd90b35ab1e771e1f2f89a202c2a8a8a"
   integrity sha512-gvVijfZvn7R+2qyPX8mAuKcFGDf6Nc61GdvGafQsHL0sBIxfKzA+usWn4GFC/bk+QdwPUD4kWFJLhElipq+0VA==
@@ -1887,19 +1901,20 @@ mime@^3.0.0:
   resolved "https://registry.yarnpkg.com/mime/-/mime-3.0.0.tgz#b374550dca3a0c18443b0c950a6a58f1931cf7a7"
   integrity sha512-jSCU7/VB1loIWBZe14aEYHU/+1UMEHoaO7qxCOVJOw9GgH72VAWppxNcjU+x9a2k3GSIBXNKxXQFqRvvZ7vr3A==
 
-minify@10.5.2:
-  version "10.5.2"
-  resolved "https://registry.yarnpkg.com/minify/-/minify-10.5.2.tgz#6fad8cdecbb17e880888c0130bb622fc259c2f1d"
-  integrity sha512-/7aNrZ7kMe43o0NQUftL/H9QBi15FYEUo7tnw0Nrcc+XsmNS6nP4cIL4iqrNzSzv1rUaHLBxpmYbETKT9dKZiQ==
+minify@11.1.1:
+  version "11.1.1"
+  resolved "https://registry.yarnpkg.com/minify/-/minify-11.1.1.tgz#0ad96fae06f7211d537075ad635866c446e3bae2"
+  integrity sha512-uxU7kBTvZE4Vnqaa00pV1/p5CpDH0Nu43hPhScATbgde41B7XNlQfax2kaYoxwQpZKJjGz86+16/2rlZXhIz5g==
   dependencies:
-    "@putout/minify" "^2.0.0"
+    "@putout/minify" "^3.0.0"
     clean-css "^5.0.1"
     css-b64-images "~0.2.5"
     debug "^4.1.0"
-    find-up "^6.1.0"
+    find-up "^7.0.0"
     html-minifier-terser "^7.1.0"
     readjson "^2.2.2"
     simport "^1.2.0"
+    terser "^5.28.1"
     try-catch "^3.0.0"
     try-to-catch "^3.0.0"
 
@@ -2966,6 +2981,16 @@ terser@^5.15.1:
     commander "^2.20.0"
     source-map-support "~0.5.20"
 
+terser@^5.28.1:
+  version "5.28.1"
+  resolved "https://registry.yarnpkg.com/terser/-/terser-5.28.1.tgz#bf00f7537fd3a798c352c2d67d67d65c915d1b28"
+  integrity sha512-wM+bZp54v/E9eRRGXb5ZFDvinrJIOaTapx3WUokyVGZu5ucVCK55zEgGd5Dl2fSr3jUo5sDiERErUWLY6QPFyA==
+  dependencies:
+    "@jridgewell/source-map" "^0.3.3"
+    acorn "^8.8.2"
+    commander "^2.20.0"
+    source-map-support "~0.5.20"
+
 text-hex@1.0.x:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/text-hex/-/text-hex-1.0.0.tgz#69dc9c1b17446ee79a92bf5b884bb4b9127506f5"
@@ -3054,6 +3079,11 @@ unbox-primitive@^1.0.2:
     has-bigints "^1.0.2"
     has-symbols "^1.0.3"
     which-boxed-primitive "^1.0.2"
+
+unicorn-magic@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/unicorn-magic/-/unicorn-magic-0.1.0.tgz#1bb9a51c823aaf9d73a8bfcd3d1a23dde94b0ce4"
+  integrity sha512-lRfVq8fE8gz6QMBuDM6a+LO3IAzTi05H6gCVaUpir2E1Rwpo4ZUog45KpNXKC/Mn3Yb9UDuHumeFTo9iV/D9FQ==
 
 unpipe@1.0.0, unpipe@~1.0.0:
   version "1.0.0"
